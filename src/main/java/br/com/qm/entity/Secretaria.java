@@ -36,6 +36,7 @@ public class Secretaria {
 	@Column(name = "orcamento_projeto")
 	private double orcamentoProjeto;
 
+	@JsonManagedReference
 	@OneToMany(mappedBy = "secretaria", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Projeto> projetos;
 
